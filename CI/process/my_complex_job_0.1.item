@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:JAFM4ngrFvoUgYh3ziUOiroqtFozllfeIGYa4L3e"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:XvSf+gOt9HAroMI38k0oAFu5lCP529FdldJhmCyu"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:enitTHcbFjRLlF4JYICjlckpv4kmAavw00Qybh0L"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:VE3jSnrKs4MZSWDaFIvEL5Vt5Tp9Ml20jU3MJIEL"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -113,42 +113,111 @@
     <routinesParameter id="_lJoXMFmNEeynnco-vfLe6A" name="DqStringHandling"/>
     <routinesParameter id="_lJsooFmNEeynnco-vfLe6A" name="DQTechnical"/>
   </parameters>
-  <node componentName="tRowGenerator" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="192">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRowGenerator_1"/>
-    <elementParameter field="TEXT" name="NB_ROWS" show="false" value="100"/>
-    <elementParameter field="TABLE" name="VALUES" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="ID"/>
-      <elementValue elementRef="ARRAY" value="Numeric.sequence(&quot;s1&quot;,1,1)"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="FirstName"/>
-      <elementValue elementRef="ARRAY" value="TalendDataGenerator.getFirstName()"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="LastName"/>
-      <elementValue elementRef="ARRAY" value="TalendDataGenerator.getLastName()"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="City"/>
-      <elementValue elementRef="ARRAY" value="TalendDataGenerator.getUsCity()"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="State"/>
-      <elementValue elementRef="ARRAY" value="TalendDataGenerator.getUsState()"/>
-    </elementParameter>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+  <node componentName="tS3Connection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="448">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tS3Connection_1"/>
+    <elementParameter field="CLOSED_LIST" name="CREDENTIAL_PROVIDER" value="STATIC_CREDENTIALS"/>
+    <elementParameter field="FILE" name="PROFILE_PATH" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROFILE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="ACCESS_KEY" value="&quot;AKIAQZPJGO2AYLWL456W&quot;"/>
+    <elementParameter field="PASSWORD" name="SECRET_KEY" value="enc:system.encryption.key.v1:7zsj6RhJzgXsS+BZuDHt3zgpGDDMEFymbe2JP4NFVgRNRpg5kGTUsfF4YunBn2piQv6xa0w+dn6fPxu9aDgNz/hKWc2EIzysypOYliy1b6FTjLCwvZsLTEmFSKlyckfulMBH4TITTjgcMUNdOiEXcDei1MLhgi3RKoZnVMXEIPUGqu0="/>
+    <elementParameter field="CHECK" name="ASSUME_ROLE" value="false"/>
+    <elementParameter field="TEXT" name="ARN" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="ROLE_SESSION_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SESSION_DURATION" show="false" value="15"/>
+    <elementParameter field="OPENED_LIST" name="REGION" value="DEFAULT"/>
+    <elementParameter field="CHECK" name="ENCRYPT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="KEY_TYPE" show="false" value="KMS_CMK"/>
+    <elementParameter field="CLOSED_LIST" name="ALGORITHM_SYMMETRIC_MASTER_KEY" show="false" value="AES"/>
+    <elementParameter field="CLOSED_LIST" name="ALGORITHM_ASYMMETRIC_MASTER_KEY" show="false" value="RSA"/>
+    <elementParameter field="CLOSED_LIST" name="ENCODING" show="false" value="BASE64"/>
+    <elementParameter field="PASSWORD" name="ENCRYPTED_KEY_CMK" show="false" value="enc:system.encryption.key.v1:/DRSr7fxADzjt3yexL5tm4MKhqFoMgSTwo/yH7aC"/>
+    <elementParameter field="PASSWORD" name="ENCRYPTED_KEY_BASE64" show="false" value="enc:system.encryption.key.v1:xwp/GaCcmH3I8qudDSdEOBfXGtXLESyLOd0wx64x"/>
+    <elementParameter field="FILE" name="ENCRYPTED_KEY_X509" show="false" value="&quot;&quot;"/>
+    <elementParameter field="FILE" name="PUBLIC_KEY" show="false" value="&quot;&quot;"/>
+    <elementParameter field="FILE" name="PRIVATE_KEY" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="USE_REGION_ENDPOINT" value="false"/>
+    <elementParameter field="TEXT" name="REGION_ENDPOINT" show="false" value="&quot;s3.amazonaws.com&quot;"/>
+    <elementParameter field="CHECK" name="PATHSTYLEACCESS" show="false" value="false"/>
+    <elementParameter field="FILE" name="WEB_IDENTITY_TOKEN_FILE" show="false" value=""/>
+    <elementParameter field="TEXT" name="WEB_TOKEN_ARN" show="false" value=""/>
+    <elementParameter field="TEXT" name="WEB_TOKEN_ROLE_SESSION_NAME" show="false" value=""/>
+    <elementParameter field="CHECK" name="CONFIG_CLIENT" value="false"/>
+    <elementParameter field="TABLE" name="CLIENT_CONFIGURATION" show="false"/>
+    <elementParameter field="CHECK" name="SET_STS_ENDPOINT" show="false" value="false"/>
+    <elementParameter field="TEXT" name="STS_ENDPOINT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="OPENED_LIST" name="SIGNING_REGION" show="false" value="DEFAULT"/>
+    <elementParameter field="TEXT" name="EXTERNALID" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SERIALNUMBER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TOKENCODE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="TAGS" show="false"/>
+    <elementParameter field="TABLE" name="POLICY_TABLE" show="false"/>
+    <elementParameter field="MEMO" name="POLICY" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CHECK_ACCESSIBILITY" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="CHECK_METHOD" value="BY_ACCOUNT_OWNER"/>
+    <elementParameter field="CHECK" name="ENABLE_ACCELERATE" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tRowGenerator_1">
-      <column comment="" defaultValue="" key="false" length="-1" name="ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true">
-        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;sequence&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;sequence identifier&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;s1\&quot;&quot;},{&quot;PARAMETER_NAME&quot;:&quot;start value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1&quot;},{&quot;PARAMETER_NAME&quot;:&quot;step&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1&quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
-      </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="FirstName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
-        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getFirstName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
-      </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="LastName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
-        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getLastName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
-      </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="City" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
-        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getUsCity&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
-      </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="State" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
-        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getUsState&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
-      </column>
-    </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="192">
+  <node componentName="tS3Get" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tS3Get_1"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tS3Connection_1"/>
+    <elementParameter field="CLOSED_LIST" name="CREDENTIAL_PROVIDER" show="false" value="STATIC_CREDENTIALS"/>
+    <elementParameter field="FILE" name="PROFILE_PATH" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROFILE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="ACCESS_KEY" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="SECRET_KEY" show="false" value="enc:system.encryption.key.v1:wRGjPlrWlQxGASn7XDh78uERUDdJv1CEluoMDerf"/>
+    <elementParameter field="CHECK" name="ASSUME_ROLE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ARN" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="ROLE_SESSION_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SESSION_DURATION" show="false" value="15"/>
+    <elementParameter field="OPENED_LIST" name="REGION" show="false" value="DEFAULT"/>
+    <elementParameter field="CHECK" name="ENCRYPT" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="KEY_TYPE" show="false" value="KMS_CMK"/>
+    <elementParameter field="CLOSED_LIST" name="ALGORITHM_SYMMETRIC_MASTER_KEY" show="false" value="AES"/>
+    <elementParameter field="CLOSED_LIST" name="ALGORITHM_ASYMMETRIC_MASTER_KEY" show="false" value="RSA"/>
+    <elementParameter field="CLOSED_LIST" name="ENCODING" show="false" value="BASE64"/>
+    <elementParameter field="PASSWORD" name="ENCRYPTED_KEY_CMK" show="false" value="enc:system.encryption.key.v1:0NnQxV6uPqWXnu++0hsEUKH5JBEnQmXeb2d4deMM"/>
+    <elementParameter field="PASSWORD" name="ENCRYPTED_KEY_BASE64" show="false" value="enc:system.encryption.key.v1:4ygVombb9P0wz8WUygGIma6vbpG8cjqcNl2M4RTS"/>
+    <elementParameter field="FILE" name="ENCRYPTED_KEY_X509" show="false" value="&quot;&quot;"/>
+    <elementParameter field="FILE" name="PUBLIC_KEY" show="false" value="&quot;&quot;"/>
+    <elementParameter field="FILE" name="PRIVATE_KEY" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="BUCKET" value="&quot;kmo-streams&quot;"/>
+    <elementParameter field="TEXT" name="KEY" value="&quot;lgaudens/britishmuseum400tweets.csv&quot;"/>
+    <elementParameter field="FILE" name="FILE" value="&quot;C:/Users/lgaudens/Desktop/talend_ci/workspace/out.csv&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="FILE" name="WEB_IDENTITY_TOKEN_FILE" show="false" value=""/>
+    <elementParameter field="TEXT" name="WEB_TOKEN_ARN" show="false" value=""/>
+    <elementParameter field="TEXT" name="WEB_TOKEN_ROLE_SESSION_NAME" show="false" value=""/>
+    <elementParameter field="CHECK" name="CONFIG_CLIENT" show="false" value="false"/>
+    <elementParameter field="TABLE" name="CLIENT_CONFIGURATION" show="false"/>
+    <elementParameter field="CHECK" name="SET_STS_ENDPOINT" show="false" value="false"/>
+    <elementParameter field="TEXT" name="STS_ENDPOINT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="OPENED_LIST" name="SIGNING_REGION" show="false" value="DEFAULT"/>
+    <elementParameter field="TEXT" name="EXTERNALID" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SERIALNUMBER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TOKENCODE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="TAGS" show="false"/>
+    <elementParameter field="TABLE" name="POLICY_TABLE" show="false"/>
+    <elementParameter field="MEMO" name="POLICY" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="ENABLE_ACCELERATE" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_SELECT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="FILE_TYPE" show="false" value="CSV"/>
+    <elementParameter field="TEXT" name="QUERY" show="false" value="&quot;select s._1 from S3Object s&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="COMPRESSED_TYPE" show="false" value="NONE"/>
+    <elementParameter field="CLOSED_LIST" name="JSON_TYPE" show="false" value="LINES"/>
+    <elementParameter field="CLOSED_LIST" name="HEADER_TYPE" show="false" value="USE"/>
+    <elementParameter field="TEXT" name="FIELD_SEPARATOR" show="false" value="&quot;,&quot;"/>
+    <elementParameter field="CHECK" name="ADVANCE_CSV" show="false" value="false"/>
+    <elementParameter field="TABLE" name="CSV_CONFIGURATION" show="false"/>
+    <elementParameter field="CHECK" name="GLOBALMAP_INPUTSTREAM" show="false" value="false"/>
+    <elementParameter field="CHECK" name="CONFIG_OUTPUT" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="OUTPUT_TYPE" show="false" value="CSV"/>
+    <elementParameter field="TABLE" name="OUTPUT_CSV_CONFIG" show="false"/>
+    <elementParameter field="TEXT" name="JSON_RECORDDELIMITER" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="CHECK" name="USE_TEMP_FILES_FOR_PARALLEL_DOWNLOAD" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
@@ -194,22 +263,28 @@
       </column>
     </metadata>
   </node>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tRowGenerator_1" offsetLabelX="0" offsetLabelY="0" source="tRowGenerator_1" target="tLogRow_1">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
-  </connection>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRowGenerator_1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tS3Connection_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_518a417b-3e60-4f48-aef1-3e97cdb227c3"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Jd+w8OSBYWEoyyCzBQhw+pcwbm+OJtRh9yyTWREJi1FWE4cutEmR/Ghv1En9iu9eVMRMrxCt+BiA&#13;
-N7B21Mpd3A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_39f65ed7-9bc5-4be9-8455-09a1405b3a57"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>VoIUe9N+A08Lmr3SlC6wYFHScxUMESq0XSGQHg9DtNpdUfm2AGRXmy1F8v+ms58joVB8IbrOn1BO&#13;
-pSJ98T1miA==</DigestValue></Reference></SignedInfo><SignatureValue>REHJoHXyyMJonHkiyxWBGD8FYkYZJ+4GOsMgSBKKEq9ywHUrWD+DBaWEWdR84w80RBImXsZa5Zlg&#13;
-t4BFzOTzBQdPuy9VVLY5PqSgAypbxehqT3F06XLgZGUV+35eLlPaL9oLNaxNpnr23Y2zhAcsCJKg&#13;
-5EE4ni9bxXchDjjWFK2ZFEvv38K89M7wy59JOAEEhzZabZL/bc/UfcqqxK/6goHvx7/lBy1awaWU&#13;
-bATrbeIYUyBlu/HfN/TyhpLe2IVB9Ue639jlLTgCjWtmOjjPi4AQkXMeZUbHFaKiqfxYKBGXsrKV&#13;
-dSFj2pZyi810VDe67ZglSNGM+CS5QwTFcC1Y/w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tS3Get_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4746e9d8-a95f-4f26-a06e-944238502e57"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rRgjDxonMuFyu8WVruKEngekPkt3OP6+lNxxnX55lPZjWS6xAuQwPuiE+NmCGQYL1nBmXpUH9lb5&#13;
+j7JNAbBdnw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d9e650cf-4bbb-4bc2-bcf4-1ab9a77df58a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>F1v4wHjlu8XX4czk6Q8/Mpq8ETvqFYV1/uzUx/Q3q9hbh3JuCnc6G9cn6ofGmK7EITmkjz3tmemo&#13;
+mAuuXSJTrA==</DigestValue></Reference></SignedInfo><SignatureValue>CF/lQpoLZ61uFRen3gf0PboQj9zVwopqjQEISyvxIoiXC2Fxi8seGIMNVKRvImlSCTFRMlaOGI5i&#13;
+L8z5h2FB5/cvnl5NibFGy0Lyk2NejnD/pMAe+jlTa36idoKmzfn2hN8iB5Y8YXigSHuzvCH2A8/q&#13;
+QTu4EYwO11VI4NenaOF7/CEb22YAOtn6G0jxpTvpsP2kl8N3slXAljEPeLkdjb6FOdR6CPFHVBr1&#13;
+J9G9l4IAFQg1XrA7R49Gc2WO/x5MjIIuU/Ps87V9SZyKSSzeMMNaACduDd7T9DD/VgLl0itdF8Cz&#13;
+wfC1fBHuK0tMENiTZGskinWlUJFbZbkqw3zxDg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -231,4 +306,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_39f65ed7-9bc5-4be9-8455-09a1405b3a57" Target="#_518a417b-3e60-4f48-aef1-3e97cdb227c3"><Timestamp>2021-12-10 07:52:50</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d9e650cf-4bbb-4bc2-bcf4-1ab9a77df58a" Target="#_4746e9d8-a95f-4f26-a06e-944238502e57"><Timestamp>2021-12-10 08:04:54</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
