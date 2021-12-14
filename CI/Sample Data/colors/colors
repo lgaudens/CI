@@ -1,0 +1,184 @@
+{
+    "basicColors": [
+        {
+            "colorVariable": "@primary",
+            "colorValue": "#236192"
+        },
+        {
+            "colorVariable": "@secondary",
+            "colorValue": "#53565A"
+        },
+        {
+            "colorVariable": "@tertiary",
+            "colorValue": "#53565A"
+        }
+    ],
+    "advancedColors": [
+        {
+            "colorVariable": "@headerBackground",
+            "colorValue": "@primary"
+        },
+        {
+            "colorVariable": "@headerButtonBackground",
+            "colorValue": "transparent"
+        },
+        {
+            "colorVariable": "@headerButtonHoverBackground",
+            "colorValue": "transparent"
+        },
+        {
+            "colorVariable": "@headerButtonColor",
+            "colorValue": "#fff"
+        },
+        {
+            "colorVariable": "@headerButtonHoverColor",
+            "colorValue": "#C1D82F"
+        },
+        {
+            "colorVariable": "@textColor",
+            "colorValue": "#444"
+        },
+        {
+            "colorVariable": "@activeColor",
+            "colorValue": "@primary"
+        },
+        {
+            "colorVariable": "@linkColor",
+            "colorValue": "@primary"
+        },
+        {
+            "colorVariable": "@hoverLinkColor",
+            "colorValue": "#999900"
+        },
+        {
+            "colorVariable": "@visitedLinkColor",
+            "colorValue": "#787121"
+        },
+        {
+            "colorVariable": "@searchResultTitleColor",
+            "colorValue": "@primary"
+        },
+        {
+            "colorVariable": "@visitedSearchResultTitleColor",
+            "colorValue": "#1b476a"
+        },
+        {
+            "colorVariable": "@sidebarBackground",
+            "colorValue": "#eee"
+        },
+        {
+            "colorVariable": "@facetTitleColor",
+            "colorValue": "@tertiary"
+        },
+        {
+            "colorVariable": "@popupBackground",
+            "colorValue": "#eee"
+        },
+        {
+            "colorVariable": "@popupTitleColor",
+            "colorValue": "@primary"
+        },
+        {
+            "colorVariable": "@portalTitleColor",
+            "colorValue": "@primary"
+        },
+        {
+            "colorVariable": "@pageTitleColor",
+            "colorValue": "@tertiary"
+        },
+        {
+            "colorVariable": "@buttonColor",
+            "colorValue": "#fff"
+        },
+        {
+            "colorVariable": "@buttonBackground",
+            "colorValue": "@primary"
+        },
+        {
+            "colorVariable": "@buttonNoBackgroundColor",
+            "colorValue": "@linkColor"
+        },
+        {
+            "colorVariable": "@buttonCancelColor",
+            "colorValue": "#fff"
+        },
+        {
+            "colorVariable": "@buttonCancelBackground",
+            "colorValue": "#DB662A"
+        },
+        {
+            "colorVariable": "@buttonDeleteColor",
+            "colorValue": "#ce6564"
+        },
+        {
+            "colorVariable": "@buttonDeleteBackground",
+            "colorValue": "transparent"
+        },
+        {
+            "colorVariable": "@buttonFeatureColor",
+            "colorValue": "@primary"
+        },
+        {
+            "colorVariable": "@buttonFeatureBackground",
+            "colorValue": "transparent"
+        },
+        {
+            "colorVariable": "@headerMenuItemColor",
+            "colorValue": "@linkColor"
+        },
+        {
+            "colorVariable": "@headerMenuItemHoverColor",
+            "colorValue": "@linkColor"
+        },
+        {
+            "colorVariable": "@homeSearchContextBackground",
+            "colorValue": "@sidebarBackground"
+        },
+        {
+            "colorVariable": "@portalSubtitleColor",
+            "colorValue": "@textColor"
+        },
+        {
+            "colorVariable": "@homepageInvitationsColor",
+            "colorValue": "@textColor"
+        },
+        {
+            "colorVariable": "@homepageFacetTitleColor",
+            "colorValue": "@linkColor"
+        },
+        {
+            "colorVariable": "@contentBackground",
+            "colorValue": "#fff"
+        },
+        {
+            "colorVariable": "@searchPromoteTitle",
+            "colorValue": "@searchResultTitleColor"
+        },
+        {
+            "colorVariable": "@visitedSearchPromoteTitle",
+            "colorValue": "@visitedSearchResultTitleColor"
+        },
+        {
+            "colorVariable": "@searchPromoteExcerpt",
+            "colorValue": "@textColor"
+        },
+        {
+            "colorVariable": "@homeCarouselTitle",
+            "colorValue": "@textColor"
+        },
+        {
+            "colorVariable": "@homeCarouselTitleVisited",
+            "colorValue": "@textColor"
+        },
+        {
+            "colorVariable": "@homeCarouselDescription",
+            "colorValue": "@textColor"
+        },
+        {
+            "colorVariable": "@homeCarouselDescriptionVisited",
+            "colorValue": "@textColor"
+        }
+    ],
+    "contentStyles": "/*\tTLND configuration for Fluid Topics\n\tWARNING: Always wait for auto-validation before saving (error 500)*/\n/* reader font-size */\n\n.body {\n    font-size: 1.1em;\n}\n\n/* text styling */\n\n/*Adding space under steps for procedure that only have text. They ended up squeezed together*/\n.steps > li {\n\tmargin-bottom:1em;\n}\n\n/* adding a right margin to the text wrapper for docbook and dita*/\ndiv[class^=\"content-locale-\"] {\nmax-width: 1000px;\n}\n\n/*Styling codeblocks*/\n.codeblock {\n\tfont-family: \"Consolas\";\n  \tbackground-color: #DBDBDB;\n  \tpadding: 10px;\n  \tborder-left: solid 3px #A7A8AA;\n\twidth:75%;\n}\n\n/*codeblocks in tables still have 100% width*/\n.table .codeblock  {\n  \twidth:100%;\n} \n.simpletable .pre  {\n  \twidth:100%\n}\n \n/* adding a wordbreak to avoid overflowing codeph from table cells*/\ncode {\nword-wrap: break-word;\n}\n\n/* toggle the display of task labels (Fluid Topics generates the labels: args.gen.task.lbl = 'YES' )*/\n.tasklabel {\n\tdisplay: none;\n}\n\n\n/* \n\tAdding a color margin and background color for subscription blocks\n\tDITA elements must have outputclass=\"subscription\"\n*/\n\n/* @subscription: rgba(0, 86, 149, .75); */\n\n.subscription {\n  \tpadding-left: 10px;\n  \tmargin-top: 5px;\n  \tpadding-right: 5px;\n  \tborder-left: solid 3px #236192;\n}\n\n.subscription::before {\n\tcontent: \"Subscription\";\n  \tbackground-color: #236192;\n  \tcolor: #FFFFFF;\n  \tfont-weight: bold;\n  \tborder-radius: 3px;\n  \tpadding: 2px 5px 2px 5px;\n  \tfloat: right;\n}\n\ntr.subscription {\n \tbackground-color: #FFFFFF;\n  \tpadding-left: 10px;\n  \tpadding-bottom: 10px;\n  \tmargin-top: 5px;\n  \tpadding-top: 5px;\n  \tpadding-right: 5px;\n  \tborder-left: solid 3px #236192;\n}\n\ntr.subscription td:last-of-type::before {\n\tcontent: \"Subscr.\";\n  \tbackground-color: #236192;\n  \tcolor: #FFFFFF;\n  \tfont-weight: bold;\n  \tborder-radius: 3px;\n  \tpadding: 3px 5px 3px 5px;\n  \ttransform: rotate(90deg);\n    float:right;\n  \tmargin-right:-52px;\n  \tmargin-top:10px;\n}\n\ntr.subscription::before {\n  display:none;}\n\n/* media query to test responsive subscription flagging \n@media screen and (max-width: 640px) {\n  .subscription {\n    &::before {\n    \tcontent: \"$\";\n    }\n  }\n}\n*/\n\n/* YouTube videos */\nobject[data*=\"youtube\"] {\n  width: 570px;\n  height: 320px;\n}\n\n/* resize containers to prevent scaling */\n\n/* default = 64em */\n\np,li {\n\tmax-width: 100em;\n}\n\nul {\n\tmargin-top: 1em;\n}\n\n.filepath {\n\tfont-size:initial;\n}\n\nem.i {\npadding-right:1px;\n}\n\n/* tables styling*/\n\n.choicetable {\n  \tborder: solid 2px #DBDBDB;\n}\n\n.simpletable {\n\tmargin-top: 10px;\n}\n\ntd, th {\n\tpadding: 10px;\n\tborder: solid 2px #DBDBDB;\n\tmax-width: 400px;\n}\n\nthead {\n\tpadding: 10px;\n\tborder: solid 2px #DBDBDB;\n\tbackground: #236192; \n\tcolor: #FFF;\n}\n  \n\n/* Cells in even rows (2,4,6...) are one color */\ntr:nth-child(even) td { background: #F1F1F1;}\n.choicetable tr:nth-child(even) th { background: #F1F1F1;}\n\n/* Cells in odd rows (1,3,5...) are another (excludes header cells) */\ntr:nth-child(odd) td { background: #FEFEFE; }\n.choicetable tr:not(thead tr):nth-child(odd) th { background: #FEFEFE;}\n\n \n/* prevents links from overflowing out of the table */\ntable a {\n\tword-break: break-all;\n}\n\n\n/* enabling labels for prereq, procedure and result */\n.tasklabel {\n\tdisplay: none;\n}\n\n/* toggle the display of task labels (Fluid Topics generates the labels: args.gen.task.lbl = 'YES' )*/\n.csstasklabels {\n    color: @primary;\n  \tfont-weight:bold;\n}\n\n.content-locale-en {\n.steps::before {\n\tcontent: \"Procedure\";\n  \tmargin-left: -40px;\n   .csstasklabels();\n}\n}\n\n.content-locale-fr {\n.steps::before {\n\tcontent: \"Procédure\";\n  \tmargin-left: -40px;\n   .csstasklabels();\n}\n}\n\n/* Fixing a behaviour noticed regarding the \"Procedure\" label.\nAll procedures that include at least one image or block element in any step will have a \"stepexpand\" class assigned  to its steps.\nThis class enables a margin under the \"Procedure\" label. A procedure with only <cmd> elements (and no inline image in the first step)\nwill not have this margin. The following configuration enables a 10px margin for such procedures. */\n\n.steps > li:first-child:not(.stepxpand) {\n\tmargin-top:10px;\n}\n\n.content-locale-en {\n.section.result::before {\n\tcontent: \"Results\";\n  \t.csstasklabels();\n}\n}\n\n.content-locale-fr {\n.section.result::before {\n\tcontent: \"Résultat\";\n  \t.csstasklabels();\n}\n}\n\n.content-locale-en {\n.prereq::before {\n\tcontent: \"Before you begin\";\n  \t.csstasklabels();\n}\n}\n\n.content-locale-fr {\n.prereq::before {\n\tcontent: \"Avant de commencer\";\n  \t.csstasklabels();\n}\n}\n\n.content-locale-en {\n.postreq::before {\n\tcontent: \"What to do next\";\n  \t.csstasklabels()\n}\n}\n\n.content-locale-fr {\n.postreq::before {\n\tcontent: \"Que faire ensuite ?\";\n  \t.csstasklabels()\n}\n}\n\n/* Styling the <xmlelement> used to highlight real dita tags*/\n.xmlelement {\n    padding: 2px 4px;\n    font-size: 90%;\n    color: #c7254e;\n    background-color: #f9f2f4;\n    border-radius: 4px;\n}\n\n/* Styling images - applying a maximum size for images to prevent some images to appear way too big + shadow under images\nexcept inline images*/\n\n.fig img {\nmargin-top: 20px;\nbox-shadow: 5px 5px 10px #A5A4A4;\n} \n\nmediaobject.img {\n \tmax-height: 800px;\n\tmax-width: 800px !important; \n}\n\nimg {\n \tmax-height: 800px;\n\tmax-width: 800px !important; \n}\n\n.inlinemediaobject img {\n\tbox-shadow: 5px 5px 10px #FFFFFF;\n}\n\n\n/*Styling tips, warnings and notes*/\n\n.note.tip {\n  \tpadding: 10px;\n  \tmax-width: initial;\n}\n\n.note.warning {\n  \tpadding: 10px;\n} \n\n.note, .warning {\n  \tpadding: 10px;\n}\n\n.info {\n  \tmargin-top:10px;\n}\n\n/*preventing links from appearing in italic for Japanes and Chinese*/\n\n.content-locale-ja {\n  .xref i {\n\tfont-style: normal;\n  }\n}\n\n/*Masking empty section that have outputclass=subscription*/\n\ndiv:empty {\n  display:none;\n}\n\n/* Adding a visual distinction before single step procedures */\n\n.content-locale-en {\n.li.step.p::before {\n\tcontent: \"Procedure\";\n  \tdisplay:block;\n  \tmargin-bottom:10px;\n   .csstasklabels();\n}\n}\n\n.content-locale-fr {\n.li.step.p::before {\n\tcontent: \"Procédure\";\n  \tdisplay:block;\n  \tmargin-bottom:10px;\n   .csstasklabels();\n}\n}\n\n.li.step.p>.ph.cmd::before {\n\tcontent: \">  \";\n    font-weight:bold;\n}\n\n\n/* adding a rule to avoid grey borders around images from docbook content\nShould be cleaned in the source rather than in CSS\nto be investigated. scalefit? align?  other image property? */\n.mediaobject > table {\nborder-style: hidden;\n}\n\n/* Fixing images that were contained in mediaobject with align=center*/\n.mediaobject > table > tbody > tr >  td > img {\ntext-align:left;\nmax-height: 600px;\nmax-width: 600px !important; \n}\n\n.mediaobject {\ntext-align:left;\n}\n\n\n/* Fixing/styling  crawled KB title styles (h1, h2, h3), as well as dita and docbook  */\n\n/* DITA: section/title*/\n.section {\n  .title {\n  \tfont-weight: bold;\n    color: @primary;\n  }\n}\n\nh1, h2, h3, h4 {\ncolor:#236192 !important;/* using !important to overwrite the color specification that was hardcoded in confluence*/\nfont-family: \"source sans pro\", Helvetica, sans-serif;\n}\n\nh1[id], h2[id], h3[id] {\ncolor:#236192 !important;/* using !important to overwrite the color specification that was hardcoded in confluence*/\nfont-family: \"source sans pro\", Helvetica, sans-serif;\nfont-weight: bold;\nfont-style: normal;\n}\n\nh1[id] span, h2[id] span, h3[id] span {\ncolor:#236192 !important; /* using !important to overwrite the color specification that was hardcoded in confluence*/\nfont-family: \"source sans pro\", Helvetica, sans-serif;\nfont-weight: bold;\nfont-style: normal;\n}\n\nh1[id] {\nfont-size: 1.7em;\n}\n\nh2[id] {\nfont-size: 1.4em;\n}\n\nh3[id] {\nfont-size: 1.2em;\n}\n\n/* relationship tables (components)*/\n/* remove display flex to display at the bottom of the section \ndiv[class^=\"content-locale-\"] > div:first-child {\ndisplay: flex; \n}\n*/\n.related-links {\n\theight: fit-content;\n  \tbackground-color: #f1f1f1;\n    border-radius: 5px;\n  \tpadding: 10px 0px 3px 15px;\n\tmargin-top: 20px;\n}\n\n/* adding bottom space to the last item of a nested list.*/\nul>li:last-of-type {\nmargin-bottom:15px;\n}\n\n\n\n",
+    "contrasted": false
+}
