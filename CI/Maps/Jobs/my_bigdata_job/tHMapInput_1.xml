@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root t='190' id='1' V190='11' inStruct='Structures/action_movie.xml' outStruct='Structures/Jobs/my_bigdata_job/tHMapInput_1/OutputWrapper.xml' inputRep='177' nextMap='' inputStructUserName='action_movie' outputStructUserName='OutputWrapper' V1='4' name='tHMapInput_1' incarnation='230'>
+<root t='190' id='1' V190='11' inStruct='Structures/action_movie.xml' outStruct='Structures/Jobs/my_bigdata_job/tHMapInput_1/OutputWrapper.xml' inputRep='177' nextMap='' inputStructUserName='action_movie' outputStructUserName='OutputWrapper' V1='4' name='tHMapInput_1' incarnation='231'>
   <inputMapElem t='200' id='2' V200='8' input='true' structElemExists='true' usedCount='18' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='action_movie'>
     <mapNode t='190' idref='1'/>
     <child t='200' id='3' V200='8' input='true' structElemExists='true' usedCount='5' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='type'>
