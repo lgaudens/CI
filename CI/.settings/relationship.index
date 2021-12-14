@@ -1,1 +1,12 @@
-[ ]
+[ {
+  "baseItem" : {
+    "id" : "_8h57kFy2EeyP2t5PfWXNNA",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_LQd-8Fz9EeyP2t5PfWXNNA",
+    "version" : "Latest",
+    "type" : "mapper"
+  } ]
+} ]
