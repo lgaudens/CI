@@ -1,0 +1,121 @@
+{
+    "type": "Crime Movie",
+    "detail": {
+               "movies":
+                       { "name": "El Angel",
+                         "release": "09/08/2018",
+                         "rating": "7"
+                       },
+                "starring": "Lorenzo Ferro"
+               }
+}
+{
+    "type": "Documentary",
+    "detail": {
+               "movies":
+                       { "name": "Wild Wild Country",
+                         "release": "16/03/2018",
+                         "rating": "8"
+                       },
+                "starring": "Ma Anand Sheila"
+               }
+}
+{
+    "type": "Drama",
+    "detail": {
+               "movies":
+                       { "name": "Moonlight",
+                         "release": "16/02/2017",
+                         "rating": "7"
+                       },
+                "starring": "Mahershala Ali"
+               }
+}
+{
+    "type": "Family movie",
+    "detail": {
+               "movies":
+                       { "name": "Kirikou and the Sorceress",
+                         "release": "09/12/1998",
+                         "rating": "7"
+                       },
+                "starring": "Awa Sène Sarr"
+               }
+}
+{
+    "type": "Thriller",
+    "detail": {
+               "movies":
+                       { "name": "Parasite",
+                         "release": "30/05/2019",
+                         "rating": "9"
+                       },
+                "starring": "Cho Yeo-jeong"
+               }
+}
+{
+    "type": "Miniseries",
+    "detail": {
+               "movies":
+                       { "name": "Unorthodox",
+                         "release": "26/03/2020",
+                         "rating": "8"
+                       },
+                "starring": "Shira Haas"
+               }
+}
+{
+    "type": "Horror movie",
+    "detail": {
+               "movies":
+                       { "name": "Train to Busan",
+                         "release": "17/08/2016",
+                         "rating": "7"
+                       },
+                "starring": "Gong Yoo"
+               }
+}
+{
+    "type": "Comedy",
+    "detail": {
+               "movies":
+                       { "name": "Muriel's Wedding",
+                         "release": "18/01/1995",
+                         "rating": "7"
+                       },
+                "starring": "Toni Collette"
+               }
+}
+{
+    "type": "Adventure",
+    "detail": {
+               "movies":
+                       { "name": "Thelma & Louise",
+                         "release": "29/05/1991",
+                         "rating": "7"
+                       },
+                "starring": "Susan Sarandon"
+               }
+}
+{
+    "type": "Science Fiction",
+    "detail": {
+               "movies":
+                       { "name": "Jurassic Park",
+                         "release": "09/06/1993",
+                         "rating": "8"
+                       },
+                "starring": "Laura Dern"
+               }
+}
+{
+    "type": "Science Fiction",
+    "detail": {
+               "movies":
+                       { "name": "Jurassic Park",
+                         "release": "09/06/1993",
+                         "rating": "8"
+                       },
+                "starring": "Laura Dern"
+               }
+}
