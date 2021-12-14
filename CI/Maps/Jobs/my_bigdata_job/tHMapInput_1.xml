@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root t='190' id='1' V190='11' inStruct='Structures/action_movie.xml' outStruct='Structures/Jobs/my_bigdata_job/tHMapInput_1/OutputWrapper.xml' inputRep='177' nextMap='' inputStructUserName='action_movie' outputStructUserName='OutputWrapper' V1='4' name='tHMapInput_1' incarnation='290'>
+<root t='190' id='1' V190='11' inStruct='Structures/action_movie.xml' outStruct='Structures/Jobs/my_bigdata_job/tHMapInput_1/OutputWrapper.xml' inputRep='177' nextMap='' inputStructUserName='action_movie' outputStructUserName='OutputWrapper' V1='4' name='tHMapInput_1' incarnation='309'>
   <inputMapElem t='200' id='2' V200='8' input='true' structElemExists='true' usedCount='34' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='action_movie'>
     <mapNode t='190' idref='1'/>
     <child t='200' id='3' V200='8' input='true' structElemExists='true' usedCount='9' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='type'>
@@ -24,7 +24,7 @@
       </child>
     </child>
   </inputMapElem>
-  <outputMapElem t='200' id='10' V200='8' structElemExists='true' usedCount='58' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_loop='true' V1='4' name='root'>
+  <outputMapElem t='200' id='10' V200='8' structElemExists='true' usedCount='60' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_loop='true' V1='4' name='root'>
     <mapNode t='190' idref='1'/>
     <loop>SimpleLoop([autoAdded="true"],in$/action_movie,{Filter},{Sort Keys},{Contexts})</loop>
     <child t='200' id='11' V200='8' usedCount='19' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/Jobs/my_bigdata_job/tHMapInput_1/type.xml' V281='13' modifiedFromParent_io='true' V1='4' name='type'>
@@ -60,8 +60,9 @@
         </child>
       </child>
     </child>
-    <child t='200' id='27' V200='8' structElemExists='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/Jobs/my_bigdata_job/tHMapInput_1/name_2.xml' V281='13' V1='4' name='name_2'>
+    <child t='200' id='27' V200='8' structElemExists='true' usedCount='2' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/Jobs/my_bigdata_job/tHMapInput_1/name_2.xml' V281='13' modifiedFromParent_io='true' V1='4' name='name_2'>
       <mapNode t='190' idref='1'/>
+      <io>WriteURL([repName="AVRO"],{URL})</io>
     </child>
   </outputMapElem>
   <inputRepRuntime t='697' id='15' V697='1' V690='1' padOutput='true' encoding='UTF-8'>
@@ -76,6 +77,9 @@
     </child>
     <child t='166' id='18' V166='5' docType='1' docReposPath='/CI/Sample Data/action_movie/action_movie' V1='4' name='in$/action_movie'>
       <elemNode t='200' idref='2'/>
+    </child>
+    <child t='166' id='28' V166='5' docType='2' V1='4' name='out$/root/name_2'>
+      <elemNode t='200' idref='27'/>
     </child>
   </child>
   <child t='201' id='19' V1='4' name='Inherits From'>
