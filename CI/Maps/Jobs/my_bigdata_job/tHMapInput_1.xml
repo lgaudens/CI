@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root t='190' id='1' V190='11' inStruct='Structures/colors.xml' outStruct='Structures/Jobs/my_bigdata_job/tHMapInput_1/OutputWrapper.xml' inputRep='177' nextMap='' inputStructUserName='colors' outputStructUserName='OutputWrapper' V1='4' name='tHMapInput_1' incarnation='187'>
-  <inputMapElem t='200' id='2' V200='8' input='true' structElemExists='true' usedCount='5' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='colors'>
+<root t='190' id='1' V190='11' inStruct='Structures/colors.xml' outStruct='Structures/Jobs/my_bigdata_job/tHMapInput_1/OutputWrapper.xml' inputRep='177' nextMap='' inputStructUserName='colors' outputStructUserName='OutputWrapper' V1='4' name='tHMapInput_1' incarnation='153'>
+  <inputMapElem t='200' id='2' V200='8' input='true' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='colors'>
     <mapNode t='190' idref='1'/>
     <child t='200' id='3' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='basicColors'>
       <mapNode t='190' idref='1'/>
@@ -27,16 +27,16 @@
       <mapNode t='190' idref='1'/>
     </child>
   </inputMapElem>
-  <outputMapElem t='200' id='11' V200='8' structElemExists='true' usedCount='16' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_loop='true' V1='4' name='root'>
+  <outputMapElem t='200' id='11' V200='8' structElemExists='true' usedCount='10' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_loop='true' V1='4' name='root'>
     <mapNode t='190' idref='1'/>
     <loop>SimpleLoop([autoAdded="true"],in$/colors,{Filter},{Sort Keys},{Contexts})</loop>
-    <child t='200' id='12' V200='8' structElemExists='true' usedCount='5' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/Jobs/my_bigdata_job/tHMapInput_1/basic.xml' V281='13' modifiedFromParent_io='true' V1='4' name='basic'>
+    <child t='200' id='12' V200='8' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/Jobs/my_bigdata_job/tHMapInput_1/basic.xml' V281='13' modifiedFromParent_io='true' V1='4' name='basic'>
       <mapNode t='190' idref='1'/>
       <repRuntime t='699' id='13' V699='1' V690='1' rowElemPath='/root/basicRecord'>
       </repRuntime>
       <io>WriteURL([repName="AVRO"],{URL})</io>
     </child>
-    <child t='200' id='14' V200='8' structElemExists='true' usedCount='5' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/Jobs/my_bigdata_job/tHMapInput_1/advanced.xml' V281='13' modifiedFromParent_io='true' V1='4' name='advanced'>
+    <child t='200' id='14' V200='8' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/Jobs/my_bigdata_job/tHMapInput_1/advanced.xml' V281='13' modifiedFromParent_io='true' V1='4' name='advanced'>
       <mapNode t='190' idref='1'/>
       <repRuntime t='699' id='15' V699='1' V690='1' rowElemPath='/root/advancedRecord'>
       </repRuntime>
@@ -46,17 +46,17 @@
   <inputRepRuntime t='697' id='16' V697='1' V690='1' padOutput='true' encoding='UTF-8'>
   </inputRepRuntime>
   <valueSets></valueSets>
-  <child t='165' id='17' V1='4' name='Document Bindings'>
-    <child t='166' id='18' V166='5' docType='2' V1='4' name='out$/root/basic'>
+  <child t='165' id='16' V1='4' name='Document Bindings'>
+    <child t='166' id='17' V166='5' docType='2' V1='4' name='out$/root/basic'>
       <elemNode t='200' idref='12'/>
     </child>
-    <child t='166' id='19' V166='5' docType='2' V1='4' name='out$/root/advanced'>
+    <child t='166' id='18' V166='5' docType='2' V1='4' name='out$/root/advanced'>
       <elemNode t='200' idref='14'/>
     </child>
-    <child t='166' id='20' V166='5' docType='1' docReposPath='/CI/Sample Data/colors/colors' V1='4' name='in$/colors'>
+    <child t='166' id='19' V166='5' docType='1' docReposPath='/CI/Sample Data/colors/colors' V1='4' name='in$/colors'>
       <elemNode t='200' idref='2'/>
     </child>
   </child>
-  <child t='201' id='21' V1='4' name='Inherits From'>
+  <child t='201' id='20' V1='4' name='Inherits From'>
   </child>
 </root>
