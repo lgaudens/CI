@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root t='150' id='1' V150='13' creationTimestamp='0x17dbe45885c' V1='4' name='advanced' incarnation='33'>
-  <rootElem t='167' id='16' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='root'>
+<root t='150' id='1' V150='13' creationTimestamp='0x17dbe5da8d4' V1='4' name='advanced' incarnation='44'>
+  <rootElem t='167' id='22' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='root'>
     <structNode t='150' idref='1'/>
-    <child t='167' id='17' V167='21' inheritsFromIncarnation='39' inheritsFromTimestamp='0x17dbe458774' inheritsInThisStruct='true' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/Jobs/my_bigdata_job/tHMapInput_1/advancedRecord.xml' V281='13' V1='4' name='advancedRecord'>
+    <child t='167' id='23' V167='21' inheritsFromIncarnation='52' inheritsFromTimestamp='0x17dbe5da80a' inheritsInThisStruct='true' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/Jobs/my_bigdata_job/tHMapInput_1/advancedRecord.xml' V281='13' V1='4' name='advancedRecord'>
       <structNode t='150' idref='1'/>
-      <savedDerivedCopy t='167' id='18' V167='21' needInheritInit='true' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='Structures/Jobs/my_bigdata_job/tHMapInput_1/advancedRecord.xml' V281='13' V1='4' name='advancedRecord'>
+      <savedDerivedCopy t='167' id='24' V167='21' needInheritInit='true' inheritsInThisStruct='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='Structures/Jobs/my_bigdata_job/tHMapInput_1/advancedRecord.xml' V281='13' V1='4' name='advancedRecord'>
       </savedDerivedCopy>
     </child>
   </rootElem>
-  <defaultRep t='179' id='19' V179='1' V170='10' V699='1' V690='1' rowElemPath='/root/advancedRecord' ignoreExcluded='true' fixInvalidCharacters='true' V1='4' name='AVRO'>
+  <defaultRep t='179' id='25' V179='1' V170='10' V699='1' V690='1' rowElemPath='/root/advancedRecord' ignoreExcluded='true' fixInvalidCharacters='true' V1='4' name='AVRO'>
   </defaultRep>
   <child t='162' id='6' V1='4' name='Representations'>
-    <child t='177' id='20' V177='1' V170='10' V697='1' V690='1' padOutput='true' ignoreExcluded='true' fixInvalidCharacters='true' V1='4' name='JSON'>
+    <child t='177' id='26' V177='1' V170='10' V697='1' V690='1' padOutput='true' ignoreExcluded='true' fixInvalidCharacters='true' V1='4' name='JSON'>
     </child>
-    <child t='179' idref='19'/>
-    <child t='172' id='21' V172='6' autoFixNamespaceMismatch='true' V170='10' V692='1' V690='1' ignoreExcluded='true' fixInvalidCharacters='true' V1='4' name='XML'>
+    <child t='179' idref='25'/>
+    <child t='172' id='27' V172='6' autoFixNamespaceMismatch='true' V170='10' V692='1' V690='1' ignoreExcluded='true' fixInvalidCharacters='true' V1='4' name='XML'>
     </child>
   </child>
   <child t='165' id='9' V1='4' name='Document Bindings'>
