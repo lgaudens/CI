@@ -1,67 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root t='190' id='1' V190='11' inStruct='Structures/colors.xml' outStruct='Structures/Jobs/my_bigdata_job/tHMapInput_1/OutputWrapper.xml' inputRep='177' nextMap='' inputStructUserName='colors' outputStructUserName='OutputWrapper' V1='4' name='tHMapInput_1' incarnation='313'>
-  <inputMapElem t='200' id='2' V200='8' input='true' structElemExists='true' usedCount='37' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='colors'>
+<root t='190' id='1' V190='11' inStruct='Structures/colors.xml' outStruct='Structures/Jobs/my_bigdata_job/tHMapInput_1/OutputWrapper.xml' inputRep='177' nextMap='' inputStructUserName='colors' outputStructUserName='OutputWrapper' V1='4' name='tHMapInput_1' incarnation='351'>
+  <inputMapElem t='200' id='2' V200='8' input='true' structElemExists='true' usedCount='51' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='colors'>
     <mapNode t='190' idref='1'/>
-    <child t='200' id='3' V200='8' input='true' structElemExists='true' usedCount='16' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='basicColors'>
+    <child t='200' id='3' V200='8' input='true' structElemExists='true' usedCount='22' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='basicColors'>
       <mapNode t='190' idref='1'/>
-      <child t='200' id='4' V200='8' input='true' structElemExists='true' usedCount='6' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='colorVariable'>
+      <child t='200' id='4' V200='8' input='true' structElemExists='true' usedCount='8' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='colorVariable'>
         <mapNode t='190' idref='1'/>
       </child>
-      <child t='200' id='5' V200='8' input='true' structElemExists='true' usedCount='6' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='colorValue'>
+      <child t='200' id='5' V200='8' input='true' structElemExists='true' usedCount='8' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='colorValue'>
         <mapNode t='190' idref='1'/>
       </child>
     </child>
-    <child t='200' id='6' V200='8' input='true' structElemExists='true' usedCount='16' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='advancedColors'>
+    <child t='200' id='6' V200='8' input='true' structElemExists='true' usedCount='22' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='advancedColors'>
       <mapNode t='190' idref='1'/>
-      <child t='200' id='7' V200='8' input='true' structElemExists='true' usedCount='6' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='colorVariable'>
+      <child t='200' id='7' V200='8' input='true' structElemExists='true' usedCount='8' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='colorVariable'>
         <mapNode t='190' idref='1'/>
       </child>
-      <child t='200' id='8' V200='8' input='true' structElemExists='true' usedCount='6' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='colorValue'>
+      <child t='200' id='8' V200='8' input='true' structElemExists='true' usedCount='8' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='colorValue'>
         <mapNode t='190' idref='1'/>
       </child>
     </child>
   </inputMapElem>
-  <outputMapElem t='200' id='9' V200='8' structElemExists='true' usedCount='58' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_loop='true' V1='4' name='root'>
+  <outputMapElem t='200' id='9' V200='8' structElemExists='true' usedCount='76' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_loop='true' V1='4' name='root'>
     <mapNode t='190' idref='1'/>
     <loop>SimpleLoop([autoAdded="true"],in$/colors,{Filter},{Sort Keys},{Contexts})</loop>
-    <child t='200' id='10' V200='8' structElemExists='true' usedCount='25' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/Jobs/my_bigdata_job/tHMapInput_1/basic.xml' V281='13' modifiedFromParent_io='true' V1='4' name='basic'>
+    <child t='200' id='10' V200='8' structElemExists='true' usedCount='33' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/Jobs/my_bigdata_job/tHMapInput_1/basic.xml' V281='13' modifiedFromParent_io='true' V1='4' name='basic'>
       <mapNode t='190' idref='1'/>
-      <repRuntime t='699' id='26' V699='1' V690='1' rowElemPath='/root/basicRecord'>
+      <repRuntime t='699' id='29' V699='1' V690='1' rowElemPath='/root/basicRecord'>
       </repRuntime>
       <io>WriteURL([repName="AVRO"],{URL})</io>
-      <child t='200' id='20' V200='8' structElemExists='true' usedCount='18' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/Jobs/my_bigdata_job/tHMapInput_1/basicRecord.xml' V281='13' modifiedFromParent_loop='true' V1='4' name='basicRecord'>
+      <child t='200' id='20' V200='8' structElemExists='true' usedCount='24' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/Jobs/my_bigdata_job/tHMapInput_1/basicRecord.xml' V281='13' modifiedFromParent_loop='true' V1='4' name='basicRecord'>
         <mapNode t='190' idref='1'/>
         <loop>SimpleLoop(in$/colors/basicColors,{Filter},{Sort Keys},{Contexts})</loop>
-        <child t='200' id='21' V200='8' structElemExists='true' usedCount='6' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' avroJavaClass='java.lang.String' avroNullPosition='1' V281='13' modifiedFromParent_value='true' V1='4' name='colorvariable'>
+        <child t='200' id='21' V200='8' structElemExists='true' usedCount='8' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' avroJavaClass='java.lang.String' avroNullPosition='1' V281='13' modifiedFromParent_value='true' V1='4' name='colorvariable'>
           <mapNode t='190' idref='1'/>
           <value>in$/colors/basicColors/colorVariable</value>
         </child>
-        <child t='200' id='22' V200='8' structElemExists='true' usedCount='6' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' avroJavaClass='java.lang.String' avroNullPosition='1' V281='13' modifiedFromParent_value='true' V1='4' name='colorvalue'>
+        <child t='200' id='22' V200='8' structElemExists='true' usedCount='8' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' avroJavaClass='java.lang.String' avroNullPosition='1' V281='13' modifiedFromParent_value='true' V1='4' name='colorvalue'>
           <mapNode t='190' idref='1'/>
           <value>in$/colors/basicColors/colorValue</value>
         </child>
       </child>
     </child>
-    <child t='200' id='12' V200='8' structElemExists='true' usedCount='25' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/Jobs/my_bigdata_job/tHMapInput_1/advanced.xml' V281='13' modifiedFromParent_io='true' V1='4' name='advanced'>
+    <child t='200' id='12' V200='8' structElemExists='true' usedCount='33' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/Jobs/my_bigdata_job/tHMapInput_1/advanced.xml' V281='13' modifiedFromParent_io='true' V1='4' name='advanced'>
       <mapNode t='190' idref='1'/>
-      <repRuntime t='699' id='27' V699='1' V690='1' rowElemPath='/root/advancedRecord'>
+      <repRuntime t='699' id='30' V699='1' V690='1' rowElemPath='/root/advancedRecord'>
       </repRuntime>
       <io>WriteURL([repName="AVRO"],{URL})</io>
-      <child t='200' id='23' V200='8' structElemExists='true' usedCount='18' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/Jobs/my_bigdata_job/tHMapInput_1/advancedRecord.xml' V281='13' modifiedFromParent_loop='true' V1='4' name='advancedRecord'>
+      <child t='200' id='23' V200='8' structElemExists='true' usedCount='24' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/Jobs/my_bigdata_job/tHMapInput_1/advancedRecord.xml' V281='13' modifiedFromParent_loop='true' V1='4' name='advancedRecord'>
         <mapNode t='190' idref='1'/>
         <loop>SimpleLoop(in$/colors/advancedColors,{Filter},{Sort Keys},{Contexts})</loop>
-        <child t='200' id='24' V200='8' structElemExists='true' usedCount='6' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' avroJavaClass='java.lang.String' avroNullPosition='1' V281='13' modifiedFromParent_value='true' V1='4' name='colorvariable'>
+        <child t='200' id='24' V200='8' structElemExists='true' usedCount='8' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' avroJavaClass='java.lang.String' avroNullPosition='1' V281='13' modifiedFromParent_value='true' V1='4' name='colorvariable'>
           <mapNode t='190' idref='1'/>
           <value>in$/colors/advancedColors/colorVariable</value>
         </child>
-        <child t='200' id='25' V200='8' structElemExists='true' usedCount='6' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' avroJavaClass='java.lang.String' avroNullPosition='1' V281='13' modifiedFromParent_value='true' V1='4' name='colorvalue'>
+        <child t='200' id='25' V200='8' structElemExists='true' usedCount='8' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' avroJavaClass='java.lang.String' avroNullPosition='1' V281='13' modifiedFromParent_value='true' V1='4' name='colorvalue'>
           <mapNode t='190' idref='1'/>
           <value>in$/colors/advancedColors/colorValue</value>
         </child>
       </child>
     </child>
   </outputMapElem>
-  <inputRepRuntime t='697' id='28' V697='1' V690='1' padOutput='true' encoding='UTF-8'>
+  <inputRepRuntime t='697' id='31' V697='1' V690='1' padOutput='true' encoding='UTF-8'>
   </inputRepRuntime>
   <valueSets></valueSets>
   <child t='165' id='15' V1='4' name='Document Bindings'>
