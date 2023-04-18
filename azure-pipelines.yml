@@ -49,13 +49,6 @@ steps:
 #    inputs:
 #      secureFile: patch.zip
 
-  - task: CmdLine@2
-    displayName: 'List modules / available artifacts to build'
-    inputs:
-      script: |
-        pwd
-        cat $(project_name)/poms/pom.xml | sed '/<modules>/,/<\/modules>/!d'
-
   - task: Maven@3
     inputs:
         mavenPomFile: '$(project_name)/poms/pom.xml' 
