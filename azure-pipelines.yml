@@ -22,7 +22,7 @@ variables:
 #/!\ For your architecture to support this configuration, the artifact repository needs to be visible from the Azure agent running your pipeline.
 #    -DaltDeploymentRepository=releases::default::$(artifact_url)/repository/releases/
 #Parameters to publish to Talend Cloud Management Console 
-    -Pcloud-publisher
+#    -Pcloud-publisher
     -Dservice.url=$(talend_cloud_url)
     -Dcloud.token=$(talend_cloud_token)          
     -Dcloud.publisher.screenshot=true 
