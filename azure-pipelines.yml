@@ -17,17 +17,16 @@ variables:
   value: >-
     -Dlicense.path=$(license.secureFilePath)
     -Dupdatesite.path=$(updatesite_path)
-#    -Dpatch.path=$(patch.secureFilePath)
-#Parameters to publish to an artifact repository
-#/!\ For your architecture to support this configuration, the artifact repository needs to be visible from the Azure agent running your pipeline.
-#    -DaltDeploymentRepository=releases::default::$(artifact_url)/repository/releases/
-#Parameters to publish to Talend Cloud Management Console 
-#    -Pcloud-publisher
+    -Pcloud-publisher
     -Dservice.url=$(talend_cloud_url)
     -Dcloud.token=$(talend_cloud_token)          
     -Dcloud.publisher.screenshot=true 
     -Dcloud.publisher.environment=XXX 
     -Dcloud.publisher.workspace=XXX
+#    -Dpatch.path=$(patch.secureFilePath)
+#Parameters to publish to an artifact repository
+#/!\ For your architecture to support this configuration, the artifact repository needs to be visible from the Azure agent running your pipeline.
+#    -DaltDeploymentRepository=releases::default::$(artifact_url)/repository/releases/
 #Parameters to publish to Docker  
 #    -Pdocker
 #    -Ddocker.push.registry=$(docker_registry)
