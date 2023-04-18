@@ -11,7 +11,7 @@ variables:
   value: 'XXX'
 #Variable corresponding to the specific artifact you want to build. Define it as a variable in the GUI so it can be overwritten at runtime. If you don't use it, all existing artifacts in your project will be executed and published. 
 - name: jobs_to_build
-  value: 'jobs/process/XXX_1.0'
+  value: 'process/*_0.1'
 
 - name: talend_ci_config
   value: >-
