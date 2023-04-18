@@ -45,10 +45,10 @@ steps:
     inputs:
       secureFile: license
 
-  - task: DownloadSecureFile@1
-    name: patch
-    inputs:
-      secureFile: patch.zip
+#  - task: DownloadSecureFile@1
+#    name: patch
+#    inputs:
+#      secureFile: patch.zip
 
   - task: Maven@3
     inputs:
