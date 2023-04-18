@@ -42,7 +42,7 @@ steps:
   - task: DownloadSecureFile@1
     name: license
     inputs:
-      secureFile: license
+      secureFile: license731
 
 #  - task: DownloadSecureFile@1
 #    name: patch
