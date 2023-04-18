@@ -21,8 +21,8 @@ variables:
     -Dservice.url=$(talend_cloud_url)
     -Dcloud.token=$(talend_cloud_token)          
     -Dcloud.publisher.screenshot=true 
-    -Dcloud.publisher.environment=XXX 
-    -Dcloud.publisher.workspace=XXX
+    -Dcloud.publisher.environment=dev-ci 
+    -Dcloud.publisher.workspace=ci-ws
 #    -Dpatch.path=$(patch.secureFilePath)
 #Parameters to publish to an artifact repository
 #/!\ For your architecture to support this configuration, the artifact repository needs to be visible from the Azure agent running your pipeline.
