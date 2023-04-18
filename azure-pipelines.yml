@@ -1,0 +1,59 @@
+# Talend CI/CD on Azure DevOps
+# Build Pipeline for building and publishing to Talend Cloud Management Console/Nexus/Docker
+
+trigger: none
+pool:
+ vmImage: 'ubuntu-latest'
+
+variables:
+- group: Talend variables
+- name: project_name
+  value: 'XXX'
+#Variable corresponding to the specific artifact you want to build. Define it as a variable in the GUI so it can be overwritten at runtime. If you don't use it, all existing artifacts in your project will be executed and published. 
+- name: jobs_to_build
+  value: 'jobs/process/XXX_1.0'
+
+- name: talend_ci_config
+  value: >-
+    -Dlicense.path=$(license.secureFilePath)
+    -Dupdatesite.path=$(updatesite_path)
+    -Dpatch.path=$(patch.secureFilePath)
+#Parameters to publish to an artifact repository
+#/!\ For your architecture to support this configuration, the artifact repository needs to be visible from the Azure agent running your pipeline.
+#    -DaltDeploymentRepository=releases::default::$(artifact_url)/repository/releases/
+#Parameters to publish to Talend Cloud Management Console 
+    -Pcloud-publisher
+    -Dservice.url=$(talend_cloud_url)
+    -Dcloud.token=$(talend_cloud_token)          
+    -Dcloud.publisher.screenshot=true 
+    -Dcloud.publisher.environment=XXX 
+    -Dcloud.publisher.workspace=XXX
+#Parameters to publish to Docker  
+#    -Pdocker
+#    -Ddocker.push.registry=$(docker_registry)
+#    -Ddocker.push.username=$(docker_username)
+#    -Ddocker.push.password=$(docker_password)
+
+steps:
+  - task: DownloadSecureFile@1
+    name: settings_xml
+    inputs:
+      secureFile: maven_settings.xml
+
+  - task: DownloadSecureFile@1
+    name: license
+    inputs:
+      secureFile: license
+
+  - task: DownloadSecureFile@1
+    name: patch
+    inputs:
+      secureFile: patch.zip
+
+  - task: Maven@3
+    inputs:
+        mavenPomFile: '$(project_name)/poms/pom.xml' 
+        mavenOptions: |
+          -Xmx3096m -Xms1024m
+        options: '--settings $(settings_xml.secureFilePath) -pl $(jobs_to_build) -am -fae $(talend_ci_config)'
+        goals: 'deploy'
