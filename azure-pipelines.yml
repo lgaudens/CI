@@ -17,7 +17,7 @@ variables:
   value: >-
     -Dlicense.path=$(license.secureFilePath)
     -Dupdatesite.path=$(updatesite_path)
-    -Dpatch.path=$(patch.secureFilePath)
+#    -Dpatch.path=$(patch.secureFilePath)
 #Parameters to publish to an artifact repository
 #/!\ For your architecture to support this configuration, the artifact repository needs to be visible from the Azure agent running your pipeline.
 #    -DaltDeploymentRepository=releases::default::$(artifact_url)/repository/releases/
