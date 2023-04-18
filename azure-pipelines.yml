@@ -8,7 +8,7 @@ pool:
 variables:
 - group: Talend variables
 - name: project_name
-  value: 'XXX'
+  value: 'CI'
 #Variable corresponding to the specific artifact you want to build. Define it as a variable in the GUI so it can be overwritten at runtime. If you don't use it, all existing artifacts in your project will be executed and published. 
 - name: jobs_to_build
   value: 'process/*_0.1'
