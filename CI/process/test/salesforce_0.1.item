@@ -282,13 +282,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ef97dd0e-735f-4616-af6f-e78184026629"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>xfnC0+UZNeE52dbATL60q0FJK+YvEcejkJuPCnZhyq5RL7iMpqIe439f2FgBvM/QuqsfuxmWDEka&#13;
-IqBMAXPCEw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f48c3b56-cfc3-4d62-ba1a-d53569f69654"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>i0EqLahGeAWDBNW9wr/PJPc8FIvBYSR4nRDWvYNlOOGNHjT8Bbg1571VTY4H+KFH+LWYlSDlZVyI&#13;
-uwEoI/N/hg==</DigestValue></Reference></SignedInfo><SignatureValue>lxkcAgSMj5JzPXnUzwfuCpoTdMaqj0ALmY2Nf7sNyEBawKMJaln/oWxhGAX6jAInvDMHDFppfCjd&#13;
-8njRRhalmYGDQKbUbrMuMg66ObKu1CM6ydxaC8Vx0I8ax3h2otG3CP/y6b95DlOIUFWOwiuyvXXt&#13;
-ADk0M6X4Ds8zPrZwqq/wrZAMYgF8cDmxPy+ABvlA2S5+4I2XjBxXbtwItrJiAa0L0hMcayjLBZBZ&#13;
-J7EnauXq2pGalMkd/p62SP/0kwIYyQhrieQ6/rvzrjme7wnHkMdNKR4O6Yk17KAPz+LusQCGgDqu&#13;
-3HEFSGyUKacQ/5dCJYgv9NJbfnq4vqALSuTJiw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f29d50c9-ac25-4442-a533-7f2407a0e108"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>xfnC0+UZNeE52dbATL60q0FJK+YvEcejkJuPCnZhyq5RL7iMpqIe439f2FgBvM/QuqsfuxmWDEka&#13;
+IqBMAXPCEw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_27fe2cbe-02ab-47cf-b834-9b8eb53d3838"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>eZh1wDOS7Es66iTkl8WzEvF5nzAnUON1SLcl8Aygc/731QR73jsJCaye7NgRH+V5NzaEYYcvtTB9&#13;
+L6iIh2tj9g==</DigestValue></Reference></SignedInfo><SignatureValue>JxfrKkKVgSfGJFmg6wN4adusPZhZp1zK9NgFT9cyCsyYs7v5Chnf3UEJSf0mDhJcdMAJqejiQdVh&#13;
+QN6ut1rvdgsQ+JFbxCT+H+Dnt9W2V5d1/ebIRfYfZwOVFqtfaypHuZ3eOe8lg9v90i+BJh8crgsG&#13;
+eG4VslGVUeS8gvGa8XfGDiHy5smVdgvgz+oC1VPM7GGNVKLs28G1VNuFk89Mzrp776O6JrcVGNft&#13;
+WhU/VIqJKJoYrRW4acQMbqOlCJNL4DZjOxQo9x4c59q5CRmYiLkZSOGBvjzsV2Gh4lfd+QoCn4p4&#13;
+jggkj194KoSaDbUpBOwA8MggpbuFLz7uWSf+3A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -310,4 +310,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f48c3b56-cfc3-4d62-ba1a-d53569f69654" Target="#_ef97dd0e-735f-4616-af6f-e78184026629"><Timestamp>2024-01-18 12:50:41</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_27fe2cbe-02ab-47cf-b834-9b8eb53d3838" Target="#_f29d50c9-ac25-4442-a533-7f2407a0e108"><Timestamp>2024-01-30 10:38:35</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
