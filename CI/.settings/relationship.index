@@ -20,26 +20,4 @@
     "version" : "Latest",
     "type" : "context"
   } ]
-}, {
-  "baseItem" : {
-    "id" : "_0FQ60M4rEe2xn5NoSx3m0w",
-    "version" : "0.1",
-    "type" : "test_case"
-  },
-  "relatedItems" : [ {
-    "id" : "_QqulkM4PEe25ROIih5BqhA",
-    "version" : "0.1",
-    "type" : "test_case"
-  } ]
-}, {
-  "baseItem" : {
-    "id" : "_wiP_sM4uEe2xn5NoSx3m0w",
-    "version" : "0.1",
-    "type" : "test_case"
-  },
-  "relatedItems" : [ {
-    "id" : "_5DIREM4tEe2xn5NoSx3m0w",
-    "version" : "0.1",
-    "type" : "test_case"
-  } ]
 } ]
