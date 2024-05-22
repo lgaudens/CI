@@ -98,7 +98,30 @@
     <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
     <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
   </parameters>
-  <node componentName="OpenAIClient" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="240" posY="160">
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="280" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="false"/>
+    <elementParameter field="TABLE" name="VALUES" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="content"/>
+      <elementValue elementRef="VALUE" value=""/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="true"/>
+    <elementParameter field="TABLE" name="INTABLE">
+      <elementValue elementRef="content" value="&quot;Blatna ulica 99, Rovinj, 79727&quot;"/>
+      <elementValue elementRef="content" value="&quot;Heeresingel 5-1, Nieuwvliet, 2631VK&quot;"/>
+      <elementValue elementRef="content" value="&quot;71693 Stefan Gateway, Lake Herta, 59778&quot;"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" show="false" value=""/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_1">
+      <column comment="" key="false" length="-1" name="content" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="OpenAIClient" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="480" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tOpenAIClient_1"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" show="false" value="b3BlbmFpLXN0dWRpbyNPcGVuQUkjQ2xpZW50"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
@@ -106,7 +129,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="PASSWORD" name="configuration.dataset.datastore.token" value="enc:system.encryption.key.v1:o8OyA1WgDeLO29D5TAWsoe1o8DuihEbglzBUlXgrkYLQwWrKNBmYeHUb6yfBsnjySZX4FBmjZBq23Wj8gHlX/HvmDiMsrC4MNF3pK9Mwz5ALdm8HPfU="/>
     <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataset.model" value="gpt-3.5-turbo"/>
-    <elementParameter field="TEXT_AREA" name="configuration.dataset.prompt" value="what are tooth gems?"/>
+    <elementParameter field="TEXT_AREA" name="configuration.dataset.prompt" value="Given the following address, evaluate the country name mentioned. Provide only the country name in the answer."/>
     <elementParameter field="TEXT" name="configuration.dataset.datastore.base" value="https://api.openai.com"/>
     <elementParameter field="TEXT" name="configuration.dataset.endpoint" value="v1/chat/completions"/>
     <elementParameter field="CHECK" name="configuration.dataset.useJSON" value="false"/>
@@ -123,9 +146,11 @@
     <metadata connector="LOOKUP" name="LOOKUP"/>
     <metadata connector="MERGE" name="MERGE"/>
     <metadata connector="REJECT" name="REJECT"/>
-    <metadata connector="FLOW" name="tOpenAIClient_1"/>
+    <metadata connector="FLOW" name="tOpenAIClient_1">
+      <column comment="" key="false" length="-1" name="content" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="400" posY="160">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="680" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
@@ -138,28 +163,42 @@
     <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
     <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
     <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
-    <elementParameter field="TABLE" name="LENGTHS" show="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="content"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tLogRow_1"/>
+    <metadata connector="FLOW" name="tLogRow_1">
+      <column comment="" key="false" length="-1" name="content" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
   </node>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tOpenAIClient_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="content"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+  </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tOpenAIClient_1" offsetLabelX="0" offsetLabelY="0" source="tOpenAIClient_1" target="tLogRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tOpenAIClient_1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_cb0bfc3e-60c3-490b-8da5-ce2201f3eb3e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>4KzHO0dlm+POy/jE8VscR+BMjgtQhViGVhxSpPzyT96NCrWEfb5rhIf0+BJv2UfNUR6jSjC5BxhZ&#13;
-coYjhZko0w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_de899ac6-9e75-4a42-b091-e3d2c8845fb0"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>meww+v1LPZWDsWFrM6Al7HrE16jBi1xpnVAZcEZdfUc0EIXJ2gtLamFfxGi3DMiY6w1+a35kjz43&#13;
-FqnbvJXq+g==</DigestValue></Reference></SignedInfo><SignatureValue>iXRkFS8qr4gPUpV7RMbWpdMncBHFjiInhc4+1ARCxkGgtxoKr9NWzaTvb2o4nJnL2ZYmKQHEznR4&#13;
-Dz5PYlHl37VGr/AptxhyidShoM6N0EoDkZ8vKsKtwGp76kPhquBR5pGR2SgJGzhkKyx0empuWsqL&#13;
-dgMkWcUP9/iNbb49wXRCXEBtKjppsnjS7LADUgZA6VG4iJ3EqnkXy7brqc5oOKHznLZz02iEWRDY&#13;
-N/heeWQugePdTbvSVUvuDyBYzbaOWkkC5uL5ldVWUF3JaPeArCxWE6MrdWDrG5if13zW28dz+IEj&#13;
-9hq/l0oLARFw/cTX4BN1pLLQd8WT03qkt2+42g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c9173b63-fe5e-46c1-acbf-c16c06c39f8d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>HL7wHUCojQK/ko/B+pGCKTLzn85sMcQd24kJqgHELMxMQpYwQnEZGN1J4yTc74tk53CB5AQFZ8sG&#13;
+Mt3z8z6sMg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ab1a559b-f053-4dc2-a836-e1ad8b1641ec"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rTNw7DWP9PeKQq3HDxPrW8ju9+w8d918ZKdY//MI/7nvk5bAs4a+M/USIEnTMVBjiNSoZ7GxA8eM&#13;
+8/k2mfWILQ==</DigestValue></Reference></SignedInfo><SignatureValue>kM/dzihrpVlu273WM3fwRUaG5UcS2LqakJtHSJetH5hVrEI7NhJndQvit8f1qUG2wuNHK2rDhPQ6&#13;
+u9vYNdMVSoyAk+eYSlWQYaThggmU5ga3X+ztXcLd+nkGTInLOI4vWCgJn7gc2q/aBc8ROBQMy+V5&#13;
+0OYL6E0fEWC64kNL9n8VmtjFVotaKuzmzD0xFAhzZI1QuaN1C1b+9/dRAS3ykQ0j2UGjwIRDRnL2&#13;
+ULpKZ77h2RtxL+AwggG550lNKft9D82iGK2c4VHjRYMNChZqIcUplXptNCv5woRcNN75fr2KzJMT&#13;
+5VFcmkIh9UM9PC2mPWuc7rI0yMMtCzezW+NDXg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -181,4 +220,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_de899ac6-9e75-4a42-b091-e3d2c8845fb0" Target="#_cb0bfc3e-60c3-490b-8da5-ce2201f3eb3e"><Timestamp>2024-05-02 09:43:13</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ab1a559b-f053-4dc2-a836-e1ad8b1641ec" Target="#_c9173b63-fe5e-46c1-acbf-c16c06c39f8d"><Timestamp>2024-05-22 08:37:41</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
